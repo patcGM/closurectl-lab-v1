@@ -1,0 +1,14 @@
+name: Disposable long-running target
+
+on:
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  hold:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - name: Keep disposable run active
+        run: sleep 3300
